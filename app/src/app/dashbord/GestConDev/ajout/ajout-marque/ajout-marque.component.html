@@ -1,0 +1,19 @@
+<form>
+  <div class="form-group">
+    <label for="nommar">Nommar:</label>
+    <input type="text" class="form-control" id="nommar" [(ngModel)]="MarqueDto.nommar" name="nommar">
+  </div>
+  <div class="form-group">
+    <label for="profil">Profil:</label>
+    <input type="text" class="form-control" id="profil" [(ngModel)]="MarqueDto.profil" name="profil">
+  </div>
+  <div class="form-group">
+    <label for="geo">Geo:</label>
+    <input type="text" class="form-control" id="geo" [(ngModel)]="MarqueDto.geo" name="geo">
+  </div>
+  <div class="form-group">
+    <label for="cible">Cible:</label>
+    <input type="number" class="form-control" id="cible" [(ngModel)]="MarqueDto.cible" name="cible">
+  </div>
+  <button type="submit" class="btn btn-primary" (click)="ajouter()">Ajouter </button>
+</form>

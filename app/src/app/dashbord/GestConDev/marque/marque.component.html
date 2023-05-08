@@ -1,0 +1,59 @@
+
+
+<section class="row">
+  <div class="col-md-12">
+    <div class="top" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+      padding: 5px;">
+
+        <button class="btn-secondary" routerLink="/GCD/ajout-marque">Ajouter </button>
+<div>
+        <input type="text" placeholder="Recherche par nom..." [(ngModel)]="searchTerm">
+        <button class="btn-secondary" style="background-color: #AFB3B9;"type="button" (click)="onSearch()">Rechercher</button>
+      </div>
+
+
+    </div>
+    <table id="my-table">
+      <thead style="background-color: #AFB3B9;;">
+        <tr>
+          <th>Nom Marque</th>
+          <th>geo</th>
+          <th>Profil</th>
+          <th>Cible</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let m of marque " (click)="onSelect(m)">
+          <td>{{m.nommar}}</td>
+          <td>{{m.geo}}</td>
+          <td>{{m.profil}}</td>
+          <td>{{m.cible}}</td>
+          <td>
+            <button class="btn btn-primary " [routerLink]="['/GCD/m/modifier-marque',m.codmar]">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" (click)="delete(m.codmar)">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-12">
+    <div class="top" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+      padding: 5px;">
+  <button class="btn-secondary" style="background-color: #AFB3B9;" (click)="exportToExcel()">Exporter vers Excel</button>
+  <button class="btn-secondary" style="background-color: #AFB3B9;" (click)="generateXML()">Générer XML</button>
+    </div>
+  </div>
+</section>

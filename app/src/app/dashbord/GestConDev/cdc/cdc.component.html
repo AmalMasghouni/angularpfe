@@ -1,0 +1,63 @@
+
+<section class="row">
+  <div class="col-md-12">
+    <div class="top" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+      padding: 5px;">
+
+        <button class="btn-secondary" routerLink="/GCD/ajout-cdc">Ajouter </button>
+<div>
+        <input type="text" placeholder="Recherche par nom..." [(ngModel)]="searchTerm">
+        <button class="btn-secondary" style="background-color: #AFB3B9;"type="button" (click)="onSearch()">Rechercher</button>
+      </div>
+
+
+    </div>
+    <table id="my-table">
+      <thead style="background-color: #AFB3B9;;">
+        <tr>
+          <th>Nom CDC</th>
+          <th>Ref Cdc</th>
+          <th>Ind</th>
+          <th>Site</th>
+          <th>Etat</th>
+          <th>Date Création</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of cdc ">
+          <td>{{c.nomCDC}}</td>
+          <td>{{c.refCDC}}</td>
+          <td>{{c.indCDC}}</td>
+          <td>{{c.idSite}}</td>
+          <td>{{c.creation}}</td>
+          <td>{{c.signatureOk}}</td>
+          <td>{{c.refCDCArdia}}</td>
+          <td>
+            <button class="btn btn-primary " [routerLink]="['/GCD/m/modifier-cdc',c.idCDC]">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-danger" (click)="delete(c.idCDC)">
+              <i class="fas fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-12">
+    <div class="top" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3px;
+      padding: 5px;">
+  <button class="btn-secondary" style="background-color: #AFB3B9;" (click)="exportToExcel()">Exporter vers Excel</button>
+
+    </div>
+  </div>
+</section>

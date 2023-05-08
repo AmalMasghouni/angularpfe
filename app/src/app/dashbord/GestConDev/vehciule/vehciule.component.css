@@ -1,0 +1,99 @@
+section {
+  font-family: "Arial", sans-serif;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #343a40;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn i {
+  font-size: 18px;
+  color: #afb3b9;
+}
+
+.btn-danger i {
+  color: red;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+td{
+  border-right: 1px solid #ddd;
+}
+
+td:last-child, th:last-child {
+  border-right: none;
+}
+tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+
+.top input[type="text"] {
+  border: none;
+  background-color: #e5e5e5;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-right: 1rem;
+  width: 200px;
+}
+
+.top .input-group-append button {
+  border-radius: 5px;
+}
+
+.top .btn-secondary {
+  background-color: #00AE4E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+}
+
+

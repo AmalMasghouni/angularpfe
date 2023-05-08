@@ -1,0 +1,65 @@
+
+  <div>
+    <label for="nomVeh">Nom du véhicule :</label>
+    <input type="text" id="nomVeh" name="nomVeh" [(ngModel)]="vehidDto.nomVeh">
+  </div>
+
+  <div>
+    <label for="nomInterne">Nom interne :</label>
+    <input type="text" id="nomInterne" name="nomInterne" [(ngModel)]="vehidDto.nomInterne">
+  </div>
+
+
+
+  <div>
+    <label for="marque">Marque :</label>
+    <input type="text" id="marque" name="marque" [(ngModel)]="vehidDto.marque">
+  </div>
+
+  <div>
+    <label for="testGlobal">Test global :</label>
+    <input type="checkbox" id="testGlobal" name="testGlobal" value="true"  [(ngModel)]="vehidDto.testGlobal">
+  </div>
+
+  <div>
+    <label for="msgDiag">Message de diagnostic :</label>
+    <input type="text" id="msgDiag" name="msgDiag" [(ngModel)]="vehidDto.msgDiag">
+  </div>
+
+  <div>
+    <label for="grpMarq">Groupe de marque :</label>
+    <input type="text" id="grpMarq" name="grpMarq" [(ngModel)]="vehidDto.grpMarq">
+  </div>
+
+  <div>
+    <label for="fro">FRO :</label>
+    <input type="text" id="fro" name="fro" [(ngModel)]="vehidDto.fro">
+  </div>
+
+  <div>
+    <label for="t">T :</label>
+    <input type="text" id="t" name="t" [(ngModel)]="vehidDto.t">
+  </div>
+
+  <div>
+    <label for="remarque">Remarque :</label>
+    <textarea id="remarque" name="remarque" [(ngModel)]="vehidDto.remarque"></textarea>
+  </div>
+
+  <div>
+    <label for="onlyElec">Uniquement électrique :</label>
+    <input type="checkbox" id="onlyElec" name="onlyElec" value="true"  [(ngModel)]="vehidDto.onlyElec">
+  </div>
+
+  <div>
+    <label for="avertissElec">Avertissement électrique :</label>
+    <input type="checkbox" id="avertissElec" name="avertissElec" value="true"  [(ngModel)]="vehidDto.avertissElec">
+  </div>
+
+  <div>
+    <label for="avertissHybrid">Avertissement hybride :</label>
+    <input type="checkbox" id="avertissHybrid" value="true" [(ngModel)]="vehidDto.avertissHybrid">
+  </div>
+
+
+<button type="submit" (click)="ajouter()">Ajouter</button>

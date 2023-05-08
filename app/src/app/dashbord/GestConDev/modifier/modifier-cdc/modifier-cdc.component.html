@@ -1,0 +1,24 @@
+
+<form>
+  <label for="nomCDC">Nom CDC:</label>
+  <input type="text" id="nomCDC" name="nomCDC" [(ngModel)]="cdc.nomCDC">
+
+  <label for="refCDC">Ref CDC:</label>
+  <input type="text" id="refCDC" name="refCDC" [(ngModel)]="cdc.refCDC">
+
+  <label for="indCDC">Ind CDC:</label>
+  <input type="text" id="indCDC" name="indCDC" [(ngModel)]="cdc.indCDC">
+
+  <label for="idSite">ID Site:</label>
+  <input type="text" id="idSite" name="idSite" [(ngModel)]="cdc.idSite">
+
+
+
+  <label for="signatureOk">Signature OK:</label>
+  <input type="checkbox" id="signatureOk" name="signatureOk" [(ngModel)]="cdc.signatureOk">
+
+  <label for="refCDCArdia">Ref CDC Ardial:</label>
+  <input type="text" id="refCDCArdia" name="refCDCArdia" [(ngModel)]="cdc.refCDCArdia">
+
+  <button type="submit" (click)="modifier()" >Modifier</button>
+</form>
